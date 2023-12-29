@@ -15,8 +15,10 @@ function renderDogErrors(dogErrorsArr){
     btn.addEventListener('click', handleLikeClick)
 
     function handleLikeClick(){
-        
+
     }
 }
+
+const form = document.querySelector('form')
 
 form.addEventListener('submit', handleNewDogStatus)
