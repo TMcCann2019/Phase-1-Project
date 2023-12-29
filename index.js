@@ -4,9 +4,19 @@ fetch ("URL")
 
 function renderDogErrors(dogErrorsArr){
     dogErrorsArr.forEach((dogErrorsObj) => {
-        
+        const h1 = document.querySelector(".dogStatus")
+        const img = document.createElement('img')
+        const title = document.createElement('p')
+        title.textContent = dogErrorsObj.status_code
+        img.src = dogErrorsObj.image
+        h1.textContent = dogErrorsObj.title
     })
-    Btn.addEventListener('click', handleLikeClick)
+    const btn = document.querySelector('.likes')
+    btn.addEventListener('click', handleLikeClick)
+
+    function handleLikeClick(){
+        
+    }
 }
 
 form.addEventListener('submit', handleNewDogStatus)
