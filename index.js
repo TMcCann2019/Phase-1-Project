@@ -5,22 +5,22 @@ fetch ("http://localhost:3000/DogErrors")
 function renderDogErrors(dogErrorsArr){
     dogErrorsArr.forEach((dogErrorsObj) => {
         const div = document.querySelector('.status')
-        const h1 = document.createElement('h1')
+        const h2 = document.createElement('h2')
         const img = document.createElement('img')
-        const title = document.createElement('p')
-        title.textContent = dogErrorsObj.code
+        const code = document.createElement('p')
+        const btn = document.createElement('button')
+        code.textContent = 'Code : ' + dogErrorsObj.code
         img.src = dogErrorsObj.image
-        h1.textContent = dogErrorsObj.title
+        h2.textContent = 'Name : ' + dogErrorsObj.title
+        btn.textContent = "Likes"
 
-        div.appendChild(h1)
-        
+        div.appendChild(img)
+        div.appendChild(code)
+        div.appendChild(h2)
+        div.appendChild(btn)
+
+        // btn.addEventListener('click', handleLikeClick)
     })
-    // const btn = document.querySelector('.likes')
-    // btn.addEventListener('click', handleLikeClick)
-
-    // function handleLikeClick(){
-
-    // }
 }
 
 // const form = document.querySelector('form')
