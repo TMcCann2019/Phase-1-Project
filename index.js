@@ -62,3 +62,5 @@ function handleNewDogStatus(e){
         body: JSON.stringify(newDogErrorsObj)
     })
 }
+
+//mouseOver event
