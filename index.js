@@ -28,14 +28,14 @@ function renderDogErrors(dogErrorsArr){
         function handleLikeClick(){
             currLikes = currLikes + 1
             btn.textContent = `${currLikes} Likes`
-            // fetch (`http://localhost:3000/DogErrors/${dogErrorsObj.id}`, {
-            //     method: "PATCH",
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //     },
-            //     body : JSON.stringify(newDogErrorsObj),
-            // })
-            // .then ((resp) => resp.json())
+            fetch(`http://localhost:3000/DogErrors/${dogErrorsObj.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({likes: currLikes}),
+            })
+            .then (console.log)
         }
     })
 }
@@ -44,12 +44,21 @@ const form = document.querySelector('form')
 
 form.addEventListener('submit', (e) => handleNewDogStatus(e))
 
-// function handleNewDogStatus(e){
-//     e.preventDefault()
-//     const newDogErrorsObj = {
-//         "title" : e.target.title.value,
-//         "image" : e.target.image.value,
-//         "code" : e.target.code.value
-//     }
-//     renderDogErrors([newDogErrorsObj])
-// }
+function handleNewDogStatus(e){
+    e.preventDefault()
+    console.log(e)
+    const newDogErrorsObj = {
+        "title" : e.target.title.value,
+        "image" : e.target.image.value,
+        "code" : e.target.code.value
+    }
+    renderDogErrors([newDogErrorsObj])
+
+    fetch(`http://localhost:3000/DogErrors/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newDogErrorsObj)
+    })
+}
