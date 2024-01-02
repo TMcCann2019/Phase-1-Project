@@ -1,5 +1,5 @@
 {
-  "DogErrors" : [
+  "DogErrors": [
     {
       "image": "https://http.dog/100.jpg",
       "code": 100,
@@ -446,7 +446,7 @@
       "title": "Request header too large",
       "likes": 0,
       "id": 64
-    }, 
+    },
     {
       "image": "https://http.dog/495.jpg",
       "code": 495,
