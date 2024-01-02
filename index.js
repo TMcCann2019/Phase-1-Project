@@ -20,9 +20,22 @@ function renderDogErrors(dogErrorsArr){
         div.appendChild(btn)
 
         // btn.addEventListener('click', handleLikeClick)
+        // const currLikes = currLikes + 1
+        // function handleLikeClick(){
+            // btn.textContent = `${currLikes} Likes`
+        // }
     })
 }
 
 // const form = document.querySelector('form')
 
-// form.addEventListener('submit', handleNewDogStatus)
+// form.addEventListener('submit', (e) => handleNewDogStatus(e))
+
+// function handleNewDogStatus(e){
+    // e.preventDefault()
+    // const newDogErrorsObj = {
+    //     key : e.target.key.value
+    //     key : e.target.key.value
+    // }
+    // renderDogErrors([newDogErrorsObj])
+// }
