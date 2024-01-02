@@ -5,13 +5,17 @@ fetch ("http://localhost:3000/DogErrors")
 function renderDogErrors(dogErrorsArr){
     dogErrorsArr.forEach((dogErrorsObj) => {
         const div = document.querySelector('.status')
+
         const h2 = document.createElement('h2')
-        const img = document.createElement('img')
-        const code = document.createElement('p')
-        const btn = document.createElement('button')
-        code.textContent = 'Code : ' + dogErrorsObj.code
-        img.src = dogErrorsObj.image
         h2.textContent = 'Name : ' + dogErrorsObj.title
+
+        const img = document.createElement('img')
+        img.src = dogErrorsObj.image
+
+        const code = document.createElement('p')
+        code.textContent = 'Code : ' + dogErrorsObj.code
+
+        const btn = document.createElement('button')
         btn.textContent = "Likes"
 
         div.appendChild(img)
@@ -28,9 +32,9 @@ function renderDogErrors(dogErrorsArr){
     })
 }
 
-// const form = document.querySelector('form')
+const form = document.querySelector('form')
 
-// form.addEventListener('submit', (e) => handleNewDogStatus(e))
+form.addEventListener('submit', (e) => handleNewDogStatus(e))
 
 // function handleNewDogStatus(e){
 //     e.preventDefault()
