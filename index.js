@@ -37,6 +37,12 @@ function renderDogErrors(dogErrorsArr){
             })
             .then (console.log)
         }
+
+        img.addEventListener('mouseover', (e) => handleMouseOver(e))
+        function handleMouseOver(e){
+            e.preventDefault()
+            img.style.boxShadow = "10px 20px 30px grey"
+        }
     })
 }
 
@@ -62,5 +68,3 @@ function handleNewDogStatus(e){
         body: JSON.stringify(newDogErrorsObj)
     })
 }
-
-//mouseOver event
