@@ -19,11 +19,12 @@ function renderDogErrors(dogErrorsArr){
         div.appendChild(h2)
         div.appendChild(btn)
 
-        // btn.addEventListener('click', handleLikeClick)
-        // const currLikes = currLikes + 1
-        // function handleLikeClick(){
-            // btn.textContent = `${currLikes} Likes`
-        // }
+        btn.addEventListener('click', handleLikeClick)
+        let currLikes = dogErrorsObj.likes
+        function handleLikeClick(){
+            currLikes = currLikes + 1
+            btn.textContent = `${currLikes} Likes`
+        }
     })
 }
 
@@ -32,10 +33,11 @@ function renderDogErrors(dogErrorsArr){
 // form.addEventListener('submit', (e) => handleNewDogStatus(e))
 
 // function handleNewDogStatus(e){
-    // e.preventDefault()
-    // const newDogErrorsObj = {
-    //     key : e.target.key.value
-    //     key : e.target.key.value
-    // }
-    // renderDogErrors([newDogErrorsObj])
+//     e.preventDefault()
+//     const newDogErrorsObj = {
+//         "title" : e.target.title.value,
+//         "image" : e.target.image.value,
+//         "code" : e.target.code.value
+//     }
+//     renderDogErrors([newDogErrorsObj])
 // }
