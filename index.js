@@ -28,6 +28,14 @@ function renderDogErrors(dogErrorsArr){
         function handleLikeClick(){
             currLikes = currLikes + 1
             btn.textContent = `${currLikes} Likes`
+            // fetch (`http://localhost:3000/DogErrors/${dogErrorsObj.id}`, {
+            //     method: "PATCH",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body : JSON.stringify(newDogErrorsObj),
+            // })
+            // .then ((resp) => resp.json())
         }
     })
 }
