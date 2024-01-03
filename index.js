@@ -43,6 +43,11 @@ function renderDogErrors(dogErrorsArr){
             e.preventDefault()
             img.style.boxShadow = "10px 20px 30px blue"
         }
+
+        img.addEventListener('mouseout', (e) => handleMouseOut(e))
+        function handleMouseOut(e) {
+            
+        }
     })
 }
 
