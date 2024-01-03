@@ -12,7 +12,7 @@ function renderDogErrors(dogErrorsArr){
         const img = document.createElement('img')
         img.src = dogErrorsObj.image
 
-        const code = document.createElement('p')
+        const code = document.createElement('h3')
         code.textContent = 'Code : ' + dogErrorsObj.code
 
         const btn = document.createElement('button')
