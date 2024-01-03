@@ -41,7 +41,7 @@ function renderDogErrors(dogErrorsArr){
         img.addEventListener('mouseover', (e) => handleMouseOver(e))
         function handleMouseOver(e){
             e.preventDefault()
-            img.style.boxShadow = "10px 20px 30px grey"
+            img.style.boxShadow = "10px 20px 30px blue"
         }
     })
 }
