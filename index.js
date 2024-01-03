@@ -46,7 +46,8 @@ function renderDogErrors(dogErrorsArr){
 
         img.addEventListener('mouseout', (e) => handleMouseOut(e))
         function handleMouseOut(e) {
-            
+            e.preventDefault()
+            img.style.boxShadow = "revert"
         }
     })
 }
