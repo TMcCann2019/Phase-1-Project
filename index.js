@@ -12,7 +12,7 @@ function renderDogErrors(dogErrorsArr){
         const img = document.createElement('img')
         img.src = dogErrorsObj.image
 
-        const code = document.createElement('p')
+        const code = document.createElement('h3')
         code.textContent = 'Code : ' + dogErrorsObj.code
 
         const btn = document.createElement('button')
@@ -42,7 +42,12 @@ function renderDogErrors(dogErrorsArr){
         function handleMouseOver(e){
             e.preventDefault()
             img.style.boxShadow = "10px 20px 30px blue"
-        }  
+        }
+
+        img.addEventListener('mouseout', (e) => handleMouseOut(e))
+        function handleMouseOut(e) {
+            
+        }
     })
 }
 
