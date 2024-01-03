@@ -4,14 +4,14 @@
       "image": "https://http.dog/100.jpg",
       "code": 100,
       "title": "Continue",
-      "likes": 3,
+      "likes": 4,
       "id": 1
     },
     {
       "image": "https://http.dog/101.jpg",
       "code": 101,
       "title": "Switching Protocols",
-      "likes": 4,
+      "likes": 5,
       "id": 2
     },
     {
